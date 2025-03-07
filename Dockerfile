@@ -9,6 +9,7 @@ COPY build.gradle .
 COPY settings.gradle .
 COPY gradlew .
 # 빌드
+RUN chmod 777 gradlew
 RUN ./gradlew bootJar
 
 # 두번째 스테이지(.jar파일을 실행 해야되기때문에 자바파일이 필요)
